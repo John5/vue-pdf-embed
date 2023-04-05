@@ -299,7 +299,7 @@ export default {
             const [actualWidth, actualHeight] = this.getPageDimensions(
               page.view[3] / page.view[2]
             )
-
+/*
             if ((this.rotation / 90) % 2) {
               canvas.style.width = `${Math.floor(actualHeight)}px`
               canvas.style.height = `${Math.floor(actualWidth)}px`
@@ -307,7 +307,7 @@ export default {
               canvas.style.width = `${Math.floor(actualWidth)}px`
               canvas.style.height = `${Math.floor(actualHeight)}px`
             }
-
+*/
             await this.renderPage(page, canvas, actualWidth)
 
             if (!this.disableTextLayer) {
@@ -407,8 +407,11 @@ export default {
     position: relative;
   }
 
-  canvas {
-    display: block;
-  }
+    canvas {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+    }
 }
 </style>
